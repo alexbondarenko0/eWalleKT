@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menu_background_color"
+    tools:context=".views.MenuFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fm_close_menu"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/close_menu_button" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fm_recycler_view_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fm_logout_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="62dp"
+            android:fontFamily="@font/avenir_next_bold"
+            android:text="@string/logout"
+            android:textColor="@color/menu_main_text_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/fm_version_label"
+            app:layout_constraintStart_toEndOf="@+id/fm_logout_imageview" />
+
+        <TextView
+            android:id="@+id/fm_version_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="27dp"
+            android:fontFamily="@font/avenir_next"
+            android:text="@string/version"
+            android:textColor="@color/version_text_color"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/fm_version_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="27dp"
+            android:fontFamily="@font/avenir_next"
+            android:textColor="@color/version_text_color"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fm_version_label" />
+
+        <ImageView
+            android:id="@+id/fm_logout_imageview"
+            android:layout_width="16dip"
+            android:layout_height="18dip"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="65dp"
+            android:src="@drawable/logout_button"
+            app:layout_constraintBottom_toTopOf="@+id/fm_version_label"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="210dip"
+            android:layout_height="107dip"
+            android:background="@drawable/curr_user_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/fm_user_avatar"
+                android:layout_width="42dip"
+                android:layout_height="42dip"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="36dp"
+                app:civ_border_color="#d8d9e4"
+                app:civ_border_width="2dip"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars">
+
+            </com.mikhaellopez.circularimageview.CircularImageView>
+
+            <TextView
+                android:id="@+id/fm_user_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="35dp"
+                android:fontFamily="@font/avenir_next_bold"
+                android:text="User name"
+                android:textColor="@color/menu_main_text_color"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/fm_user_avatar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fm_user_location_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/avenir_next"
+                android:text="location"
+                android:textColor="#7B7F9E"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@+id/fm_user_avatar"
+                app:layout_constraintTop_toBottomOf="@+id/fm_user_name_textview" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

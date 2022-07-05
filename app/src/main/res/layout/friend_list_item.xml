@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dip"
+    android:layout_height="120dip"
+    android:layout_margin="5dip"
+    android:theme="@style/Theme.EWalleKT"
+    app:cardBackgroundColor="@color/cards_background_color"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dip"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="2dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/avenir_next"
+            android:text="Name"
+            android:textAlignment="center"
+            android:textColor="@color/friend_name_text_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/fm_user_avatar"
+            android:layout_width="42dip"
+            android:layout_height="42dip"
+            app:civ_border_color="@color/friend_avatar_stroke_color"
+            app:civ_border_width="2dip"
+            app:civ_circle_color="@color/friend_avatar_background_color"
+            app:layout_constraintBottom_toTopOf="@+id/friend_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
